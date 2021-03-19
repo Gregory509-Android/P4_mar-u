@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="8dp"
+        android:id="@+id/circleImageView"
+        android:src="@drawable/ic_checkbox_blank_circle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="8dp"
+        android:id="@+id/deleteImageView"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Réunion A - 14h00 - Peach"
+        android:id="@+id/textMeeting"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circleImageView"
+        app:layout_constraintBottom_toTopOf="@id/textEmailList"
+        app:layout_constraintEnd_toStartOf="@id/deleteImageView"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="adewale@hotmail.com, toussaint@hotmail.com, dessalines@hotmail.com"
+        android:id="@+id/textEmailList"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:lines="1"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/circleImageView"
+        app:layout_constraintTop_toBottomOf="@id/textMeeting"
+        app:layout_constraintEnd_toStartOf="@id/deleteImageView"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
