@@ -23,6 +23,6 @@ public class DummyMeetingRoomGenerator {
     );
 
     public static List<Meeting> getDummyMeetingroom() {
-        return DUMMY_MEETINGROOM;
+        return new ArrayList<>(DUMMY_MEETINGROOM);
     }
 }

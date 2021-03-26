@@ -3,11 +3,12 @@ package com.example.maru.service;
 
 import com.example.maru.model.Meeting;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DummyMeetingApiService implements MeetingApiService {
 
-    private List<Meeting> meetingList = DummyMeetingRoomGenerator.DUMMY_MEETINGROOM;
+    private List<Meeting> meetingList = DummyMeetingRoomGenerator.getDummyMeetingroom();
 
     @Override
     public List<Meeting> getMeetings() {
@@ -23,4 +24,19 @@ public class DummyMeetingApiService implements MeetingApiService {
     public void createMeeting(Meeting meeting) {
         meetingList.add(meeting);
     }
+
+    /* Essai méthode filtrage
+    @Override
+    public void getFilteredMeeting (String Date, String Room){
+
+        List<Meeting> mFilteredMeeting = new ArrayList<>();
+
+        
+
+        return;mFilteredMeeting;
+
+    }
+
+     */
+
 }

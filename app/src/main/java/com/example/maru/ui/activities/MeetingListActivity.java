@@ -1,6 +1,8 @@
 package com.example.maru.ui.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.maru.R;
 import com.example.maru.databinding.ActivityMeetingListBinding;
@@ -32,6 +34,13 @@ public class MeetingListActivity extends AppCompatActivity {
         mBinding = ActivityMeetingListBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
         mApiService = DI.getMeetingApiService();
+
+        mBinding.floatingAction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), AddMeetingActivity.class));
+            }
+        });
 
     }
 
